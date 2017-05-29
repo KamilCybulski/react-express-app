@@ -27,6 +27,9 @@ const UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
 
 module.exports = {
   devServer: {
+    proxy: {
+      '/api': 'http://localhost:5000',
+    },
     host: 'localhost',
     port: '3000',
     hot: true,
@@ -49,13 +52,17 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader',
       },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader',
+      },
     ],
   },
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    filename: 'index.js',
+    filename: 'bundle.js',
     path: path.join(__dirname, '/build'),
   },
   plugins: dev ?
