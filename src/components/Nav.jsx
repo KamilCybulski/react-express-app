@@ -15,12 +15,12 @@ const Nav = () => (
             </li>
             <li>
                 <NavLink exact activeClassName='active' to='/popular'>
-                Populars
+                Popularsfew
                 </NavLink>
             </li>
             <li>
                 <NavLink activeClassName='active' to='/popular/login'>
-                Login
+                Loginfew
                 </NavLink>
             </li>
 
