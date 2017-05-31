@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "react, react-router, hot-reload, sass.",
   "main": "index.js",
-  "author": "Francesco Agnoletto",
+  "author": "-",
   "license": "MIT",
   "scripts": {
     "clear": "rm -r build",
